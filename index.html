@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es" class="light">
+  <head>
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var customFetch = originalFetch;
+          var desc = {
+            get: function() { return customFetch; },
+            set: function(v) { customFetch = v; },
+            configurable: true,
+            enumerable: true
+          };
+          Object.defineProperty(window, 'fetch', desc);
+          if (typeof globalThis !== 'undefined') {
+            Object.defineProperty(globalThis, 'fetch', desc);
+          }
+          if (typeof self !== 'undefined') {
+            Object.defineProperty(self, 'fetch', desc);
+          }
+        } catch(e) {
+          console.warn('Failed to redefine fetch getter/setter:', e);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Papada Bajo Control | Yoga Facial Clínico</title>
+    <meta name="description" content="Protocolo personalizado de 21 días de yoga facial clínico y rutinas express para activar cuello, mentón y mandíbula." />
+    <!-- Montserrat & Inter google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#f9f9f8] text-[#1a1c1b] antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

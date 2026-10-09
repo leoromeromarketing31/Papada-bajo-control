@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Montserrat", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-primary: #3d635c;
+  --color-brand-primary-container: #557c74;
+  --color-brand-on-primary: #ffffff;
+  --color-brand-secondary: #6b5c4f;
+  --color-brand-secondary-container: #f4dfce;
+  --color-brand-on-secondary-container: #716155;
+  --color-brand-tertiary: #7c5147;
+  --color-brand-tertiary-container: #98695e;
+  --color-brand-background: #f9f9f8;
+  --color-brand-surface: #f9f9f8;
+  --color-brand-surface-container: #eeeeec;
+  --color-brand-surface-container-low: #f3f4f2;
+}
+
+/* Custom interactive animation helper utilities */
+.express-gradient {
+  background: linear-gradient(135deg, #3d635c 0%, #557c74 100%);
+}
+
+.anatomy-circle {
+  border: 4px solid rgba(166, 207, 198, 0.4);
+  box-shadow: 0 8px 30px rgba(61, 99, 92, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.active-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .7;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Papada Bajo Control",
+  "description": "Protocolo personalizado de 21 días de yoga facial clínico y rutinas express para activar cuello, mentón y mandíbula.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
